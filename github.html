@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icon.svg" type="image/svg+xml">
+    <title>DeeP AppS</title>
+    <style>
+        body{
+            background: #04364A;
+        }
+        section{
+            height: 90vh;
+            display: grid;
+        }
+        .main-container{
+            display: grid;
+            grid-auto-columns: minmax(auto, 15vw);
+            grid-auto-flow: column;
+            grid-gap: 20.5vw;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+        .items{
+            position: absolute;
+            transform: translateY(-50%);
+            display: flex;
+            width: 15vw;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            border-radius: 3vw;
+            aspect-ratio: 1;
+            box-shadow: inset 0 0 20px 0 #6fb7d3, 0 0 20px 0 #cde5ee;
+            transition: 0.5s;
+        }
+        .items img{
+            width: 80%;
+            height: 80%;
+            overflow: hidden;
+        }
+        .items::after{
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            top: 77%;
+            background-color: #6fb7d3;
+            width: 100%;
+            height: 100%;
+            transform: perspective(6vw) rotateX(56deg) scale(1, 0.35);
+            filter: blur(2.3vw);
+            opacity: 0.6;
+
+        }
+        .items:hover{
+            background-color: #6fb7d32b;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="main-container">
+            <a href="https://jubayer-hossain-jb.github.io/Bijoy-converter/"><div class="items"><img src="icon.svg" alt=""></div></a>
+            <a href="https://jubayer-hossain-jb.github.io/Omni-calendar/"><div class="items"><img src="calender.png" alt=""></div></a>
+        </div>
+    </section>
+</body>
+</html>
